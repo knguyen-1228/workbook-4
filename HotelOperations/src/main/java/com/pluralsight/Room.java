@@ -14,7 +14,17 @@ public class Room {
         this.dirty = dirty;
 
     }
-
+    public void checkIn(){
+        this.occupied = true;
+        this.dirty = true;
+    }
+    public void checkOut(){
+        this.cleanRoom();
+        this.occupied = false;
+    }
+    public void cleanRoom(){
+        this.dirty = false;
+    }
 
     public int getNumberOfBeds() {
         return numberOfBeds;
