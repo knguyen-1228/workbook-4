@@ -20,18 +20,22 @@ public class Employee {
         double regularHours = 0;
         if (hoursWorked <= 40){
             regularHours = hoursWorked * payRate;
+            return  regularHours;
+        }else {
+            return regularHours;
         }
-        return  regularHours;
     }
     public double getOverTime(){
         double overTime = 0;
         if (hoursWorked > 40){
-            overTime = payRate * 1.5;
+            overTime = ((payRate * 1.5) * (hoursWorked-40)) + (payRate * 40);
+            return  overTime;
+        }else {
+            return overTime;
         }
-        return overTime;
     }
     public double totalPay(){
-        return getOverTime() * getRegularHours();
+        return getOverTime() + getRegularHours();
     }
 
     public int getEmployeeId() {
