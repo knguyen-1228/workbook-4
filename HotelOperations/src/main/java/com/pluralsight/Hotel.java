@@ -21,43 +21,46 @@ public class Hotel {
         this.bookedRooms = bookedRooms;
     }
 
-    public String getName() {
-        return name;
+    public boolean bookRoom(int numberOfRooms, boolean isSuite){
+        if(isSuite){
+            if( getAvailableSuites() >= numberOfRooms){
+                bookedSuites += numberOfRooms;
+                return true;
+            }
+        }else{
+            if(numberOfRooms <= getAvailableRoom()){
+                bookedRooms += numberOfRooms;
+                return true;
+            }
+        }
+        return false;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public int getAvailableSuites(){
+        return numberOfSuites-bookedSuites;
+    }
+
+    public int getAvailableRoom(){
+        return numberOfRooms-bookedRooms;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getNumberOfSuites() {
         return numberOfSuites;
     }
 
-    public void setNumberOfSuites(int numberOfSuites) {
-        this.numberOfSuites = numberOfSuites;
-    }
-
     public int getNumberOfRooms() {
         return numberOfRooms;
-    }
-
-    public void setNumberOfRooms(int numberOfRooms) {
-        this.numberOfRooms = numberOfRooms;
     }
 
     public int getBookedSuites() {
         return bookedSuites;
     }
 
-    public void setBookedSuites(int bookedSuites) {
-        this.bookedSuites = bookedSuites;
-    }
-
     public int getBookedRooms() {
         return bookedRooms;
-    }
-
-    public void setBookedRooms(int bookedRooms) {
-        this.bookedRooms = bookedRooms;
     }
 }

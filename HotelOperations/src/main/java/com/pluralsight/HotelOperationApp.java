@@ -11,7 +11,7 @@ public class HotelOperationApp {
         room1.checkIn();
         room2.checkOut();
         System.out.println("Is room1 available: " + room1.isAvailable());
-        System.out.println("Is room1 available: " + room2.isAvailable());
+        System.out.println("Is room2 available: " + room2.isAvailable());
 
         Reservation res1 = new Reservation("king", 4,true);
         Reservation res2 = new Reservation("double",4,false );
@@ -24,6 +24,8 @@ public class HotelOperationApp {
 
         System.out.println(emp1.getEmployeeId()+ " "  + emp1.getName() + " "+ emp1.getDepartment() + " "+ emp1.getPayRate()+ " " + emp1.getHoursWorked() + " Total pay is: " + emp1.totalPay());
         System.out.println(emp2.getEmployeeId() + " "+ emp2.getName() + " "+ emp2.getDepartment()+ " " + emp2.getPayRate() + " "+ emp2.getHoursWorked() + " Total pay is: " + emp2.totalPay());
+
+        
 
 
     }

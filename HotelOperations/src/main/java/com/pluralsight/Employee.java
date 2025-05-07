@@ -21,6 +21,7 @@ public class Employee {
         this.hoursWorked = hoursWorked;
 
     }
+
     public void punchIn(double time){
         this.punchInTime = time;
     }
