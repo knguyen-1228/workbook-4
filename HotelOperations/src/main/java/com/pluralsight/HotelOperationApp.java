@@ -25,7 +25,15 @@ public class HotelOperationApp {
         System.out.println(emp1.getEmployeeId()+ " "  + emp1.getName() + " "+ emp1.getDepartment() + " "+ emp1.getPayRate()+ " " + emp1.getHoursWorked() + " Total pay is: " + emp1.totalPay());
         System.out.println(emp2.getEmployeeId() + " "+ emp2.getName() + " "+ emp2.getDepartment()+ " " + emp2.getPayRate() + " "+ emp2.getHoursWorked() + " Total pay is: " + emp2.totalPay());
 
-        
+        Hotel hotel = new Hotel("Ktel", 10, 50);
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
+        System.out.println("Available rooms: " + hotel.getAvailableRoom());
+
+        boolean suitesBooked = hotel.bookRoom(5, true);
+        System.out.println("Booking 5 suites: " + (suitesBooked ? "success" : "failed"));
+
+        boolean roomBooked = hotel.bookRoom(3, false);
+        System.out.println("Booking 3 rooms: " + (roomBooked ? "success" : "failed"));
 
 
     }
