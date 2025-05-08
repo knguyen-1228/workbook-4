@@ -27,7 +27,7 @@ public class Employee {
     }
     public void punchIn(){
         LocalDateTime now = LocalDateTime.now();
-        double time = (now.getHour() + now.getMinute()) /60;
+        double time = now.getHour() + now.getMinute() /60;
         punchIn(time);
     }
     public void punchOut(double time){
@@ -36,7 +36,7 @@ public class Employee {
     }
     public void punchOut(){
         LocalDateTime now = LocalDateTime.now();
-        double time = (now.getHour() + now.getMinute()) /60;
+        double time = now.getHour() + now.getMinute() /60;
         punchOut(time);
     }
 
